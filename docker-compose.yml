@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_USER: ami
+      MYSQL_PASSWORD: ami123
+      MYSQL_DATABASE: rs_siti_rahmah
+      MYSQL_ROOT_PASSWORD: example
+    ports:
+      - "3306:3306"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
